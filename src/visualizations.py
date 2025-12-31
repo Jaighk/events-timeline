@@ -34,7 +34,7 @@ def generate_timeline(df: pd.DataFrame, timeline: dict[str, str], filename: str)
         .sort_index()
         .asfreq(f"{timeline['interval']}min", fill_value=0)
     )
-    # --- Plot two lines on the same axes ---
+    # --- Plot multiple lines on the same axes ---
     fig, ax = plt.subplots(figsize=(12, 5))
     for col in by_action_15m.columns:
         ax.step(
