@@ -3,14 +3,14 @@ import os
 import pandas as pd
 import matplotlib.pyplot as plt
 
-from src.utils import (
+from events_timeline.utils import (
     parse_args,
 )
-from src.data_processing import(
+from events_timeline.data_processing import(
     instantiate_data,
     save_plot
 )
-from src.visualizations import (
+from events_timeline.visualizations import (
     generate_timeline,
 )
 
