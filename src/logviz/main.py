@@ -25,7 +25,6 @@ def main() -> None:
     logviz entry point
     """
 
-    cprint("[-] Generating plots...")
     args = parse_args(args=sys.argv)
     save_file: dict[str, str] = {
         "name": "",

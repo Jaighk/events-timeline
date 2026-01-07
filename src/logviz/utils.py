@@ -14,8 +14,8 @@ def parse_args(args: list[str]) -> dict[str, Any]:
     """
 
     parser = argparse.ArgumentParser(
-        prog="data-summarizer",
-        description="A utility that ingests reports from various text-based raw-data formats such as logs, processes them, and returns a summary of the report",
+        prog="logviz",
+        description="A utility that processes reports from plain text formats such as csv and returns summary visualizations of the file",
     )
     _ = parser.add_argument(
         "-f",
@@ -23,21 +23,21 @@ def parse_args(args: list[str]) -> dict[str, Any]:
         required=True,
         nargs="*",
         type=str,
-        help="path of the data file to summarize"
+        help="path of the data file to visualize"
         )
     _ = parser.add_argument(
         "-t",
         "--timeline",
         nargs=3,
         type=str,
-        help="Generates a timeline from the data set based on a count of unique values of the specified column. Syntax: -t {required: time column} {required: time bucket size (minutes)} {required: column to plot over time}"
+        help="Generates a timeline from the file based on a count of unique values of the specified column. Syntax: -t {required: time column} {required: time bucket size (minutes)} {required: column to plot over time}"
     )
     _ = parser.add_argument(
         "-b",
         "--bar",
         nargs=2,
         type=str,
-        help="Generates a histogram from the data based on specified values `x` and 'col' Syntax: -b (--bar) {x-axis column data} {y-axis column data} Example: -b user action -> a histogram of action counts (by unique value) as a function of the user"
+        help="Generates a histogram from the data based on specified values 'entity column' and 'data column'. Syntax: -b (--bar) {x-axis column data} {y-axis column data}"
         )
     _ = parser.add_argument(
         "-o",
@@ -45,7 +45,7 @@ def parse_args(args: list[str]) -> dict[str, Any]:
         required=False,
         default="./plots",
         type=str,
-        help="path of the directory to save the plots to"
+        help="path of the directory to save the plots in. Default: ./plots"
         )
     return get_context(args=parser.parse_args())
 
