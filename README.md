@@ -1,4 +1,4 @@
-# logviz — visualize your logs in the 
+# logviz — visualize your logs from the terminal
 
 Version 0.1.0
 
