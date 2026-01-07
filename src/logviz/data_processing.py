@@ -24,7 +24,7 @@ def instantiate_data(file: str, time_col=None) -> pd.DataFrame:
             except Exception as e:
                 cprint(f"{e}", color="red", attrs=["bold"])
         case _: pass
-    cprint(f"[\u2713] Data from file: {file}, processed", color="green")
+    cprint(f"[\u2713] Data from file: {file} processed", color="green")
     return df
 
 
