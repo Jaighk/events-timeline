@@ -4,19 +4,6 @@ Version 0.1.0
 
 ---
 
-## Table of Contents
-- Quick Start
-- Features
-- Installation
-- Usage
-- Configuration
-- Examples
-- Roadmap
-- Changelog
-- License
-
----
-
 # Install
 
 ```Shell
