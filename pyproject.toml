@@ -1,6 +1,6 @@
 [project]
 name = "logviz"
-version = "0.1.0"
+version = "0.1.1"
 description = "A utility that ingests text-based logs and returns a visualization summaries of the logs"
 readme = "README.md"
 requires-python = ">=3.10"
